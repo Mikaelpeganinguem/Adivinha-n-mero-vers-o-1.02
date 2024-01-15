@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Adivinha Números</title>
+   <link rel="stylesheet" href="CSS/style.css">
+   <link rel="icon" href="CSS/cerebro icon.jpg">
+   <script src="JS/script.js"></script>
+</head>
+<body>
+   <main>
+      <header>
+         <img src="CSS/akinator avatar.jpg" alt="Foto do mago" height="150" width="150">
+         <h2>Seja bem-vindo ao Adivinha números</h2>
+      </header>
+      
+      <!-- <div id="nivel">
+         <button onclick="facil()">Fácil</button>
+         <button onclick="medio()">Médio</button>
+         <button onclick="dificil()">Difícil</button>
+         <button onclick="muitoDificil()">Muito difícil</button>
+      </div> -->
+      
+      <p class="menor">Acerte o número que eu estou pensando entre 0 e 100</p>
+      <p>você tem <span id="tentativas">5</span> Tentativas</p>
+      
+      <input type="number" id="chute" placeholder="Adivinhe aqui">
+      <p id="resposta"></p>
+      <button onclick="confirm()">Chutar</button>
+      
+      <button onclick="refresh()" id="denovo">Jogar novamente</button>
+      <footer>
+         <!-- <a href="texto.html">Creted-by</a> -->
+         <p>Created by Mikael/911A &copy 2024</p>
+         <p>Versão: 1.02.00</p>
+      </footer>
+   </main>
+</body>
+</html>
