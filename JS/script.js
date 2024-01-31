@@ -9,28 +9,22 @@ function confirm() {
     let resposta = document.getElementById("resposta");
     let chances = document.getElementById("tentativas");
     
-    if(chute === ""){
-       resposta.innerText = "Digite um numero";
-       
-    }else if(chute < 0 && chute > 100){
-       resposta.innerText = "Digite um número válido entre 0 e 100"
-    }
-    
-    
     if(chute > numero && tentativas != 1){
-       resposta.innerText = "O número que você digitou é MAIOR que o número que eu escolhi"
+       resposta.innerText = "Seu número é MAIOR que o meu"
          
        tentativas--;
        chances.innerText = tentativas;
+       document.getElementById("chute").value = ''
        
     }else if(chute < numero && tentativas != 1){
-       resposta.innerText = "O número que você digitou é MENOR que o número que eu escolhi"
+       resposta.innerText = "Seu número é MENOR que o meu"
          
        tentativas--;
        chances.innerText = tentativas;
-         
+       document.getElementById("chute").value = ''
+       
     }else if(chute === numero && tentativas != 0){
-       resposta.innerText = "PARABÉNS! Você acertou"
+       resposta.innerText = `PARABÉNS! Você acertou o número é ${numero}`
        let denovo = document.getElementById('denovo');
        
        denovo.style.display = 'block'
@@ -44,7 +38,7 @@ function confirm() {
          let denovo = document.getElementById('denovo');
          denovo.style.display = 'block'
       }else{
-         resposta.innerText = "PARABÉNS! Você acertou"
+         resposta.innerText = `PARABÉNS! Você acertou o número é ${numero}`
          let denovo = document.getElementById('denovo');
        
          denovo.style.display = 'block'
