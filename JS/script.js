@@ -9,14 +9,14 @@ function confirm() {
     let resposta = document.getElementById("resposta");
     let chances = document.getElementById("tentativas");
     
-    if(chute > numero && tentativas != 1){
+    if(chute > numero && tentativas != 0){
        resposta.innerText = "Seu número é MAIOR que o meu"
          
        tentativas--;
        chances.innerText = tentativas;
        document.getElementById("chute").value = ''
        
-    }else if(chute < numero && tentativas != 1){
+    }else if(chute < numero && tentativas != 0){
        resposta.innerText = "Seu número é MENOR que o meu"
          
        tentativas--;
@@ -24,26 +24,20 @@ function confirm() {
        document.getElementById("chute").value = ''
        
     }else if(chute === numero && tentativas != 0){
-       resposta.innerText = `PARABÉNS VOCÊ ACERTOU!! O número é ${numero}`
+       resposta.innerText = `PARABÉNS! Você acertou o número é ${numero}`
        let denovo = document.getElementById('denovo');
        
        denovo.style.display = 'block'
        document.getElementById("chute").value = "";
          
-   }else if(tentativas == 1){
-      if(chute != numero){
-         chances.innerText = 0;
+   }
+   
+   if(tentativas == 0){
+         chances.innerText = 0
          resposta.innerText = `Você perdeu ;( O número correto era ${numero}`
           
          let denovo = document.getElementById('denovo');
          denovo.style.display = 'block'
-      }else{
-         resposta.innerText = `PARABÉNS VOCÊ ACERTOU!! O número é ${numero}`
-         let denovo = document.getElementById('denovo');
-       
-         denovo.style.display = 'block'
-         document.getElementById("chute").value = "";
-      }
    }
 }
 
