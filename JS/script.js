@@ -24,7 +24,7 @@ function confirm() {
        document.getElementById("chute").value = ''
        
     }else if(chute === numero && tentativas != 0){
-       resposta.innerText = `PARABÉNS! Você acertou o número é ${numero}`
+       resposta.innerText = `PARABÉNS VOCÊ ACERTOU!! O número é ${numero}`
        let denovo = document.getElementById('denovo');
        
        denovo.style.display = 'block'
@@ -38,7 +38,7 @@ function confirm() {
          let denovo = document.getElementById('denovo');
          denovo.style.display = 'block'
       }else{
-         resposta.innerText = `PARABÉNS! Você acertou o número é ${numero}`
+         resposta.innerText = `PARABÉNS VOCÊ ACERTOU!! O número é ${numero}`
          let denovo = document.getElementById('denovo');
        
          denovo.style.display = 'block'
