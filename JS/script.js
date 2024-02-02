@@ -47,6 +47,12 @@ function confirm() {
    }
 }
 
+document.getElementById("chute").addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+   confirm();
+  }
+}); 
+
 /* Função de recarregar a página */
 
 function refresh(){
