@@ -11,25 +11,16 @@ function confirm() {
     
     if(chute > numero && tentativas != 0){
        resposta.innerText = "Seu número é MAIOR que o meu"
-         
-       tentativas--;
-       chances.innerText = tentativas;
-       document.getElementById("chute").value = ''
-       
+       atualizarTentativas();
     }else if(chute < numero && tentativas != 0){
        resposta.innerText = "Seu número é MENOR que o meu"
-         
-       tentativas--;
-       chances.innerText = tentativas;
-       document.getElementById("chute").value = ''
-       
+       atualizarTentativas();
     }else if(chute === numero && tentativas != 0){
        resposta.innerText = `PARABÉNS! Você acertou o número é ${numero}`
        let denovo = document.getElementById('denovo');
        
        denovo.style.display = 'block'
        document.getElementById("chute").value = "";
-         
    }
    
    if(tentativas == 0){
@@ -39,6 +30,13 @@ function confirm() {
          let denovo = document.getElementById('denovo');
          denovo.style.display = 'block'
    }
+}
+
+function atualizarTentativas() {
+    let chances = document.getElementById("tentativas");
+    tentativas--;
+    chances.innerText = tentativas;
+    document.getElementById("chute").value = ""
 }
 
 document.getElementById("chute").addEventListener('keypress', function(event) {
