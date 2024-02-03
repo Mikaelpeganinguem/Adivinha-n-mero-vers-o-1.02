@@ -11,10 +11,10 @@ function confirm() {
     
     if(chute > numero && tentativas != 0){
        resposta.innerText = "Seu número é MAIOR que o meu"
-       atualizarTentativas();
+       atualizarTentativas(chances);
     }else if(chute < numero && tentativas != 0){
        resposta.innerText = "Seu número é MENOR que o meu"
-       atualizarTentativas();
+       atualizarTentativas(chances);
     }else if(chute === numero && tentativas != 0){
        resposta.innerText = `PARABÉNS! Você acertou o número é ${numero}`
        let denovo = document.getElementById('denovo');
@@ -32,8 +32,7 @@ function confirm() {
    }
 }
 
-function atualizarTentativas() {
-    let chances = document.getElementById("tentativas");
+function atualizarTentativas(chances) {
     tentativas--;
     chances.innerText = tentativas;
     document.getElementById("chute").value = ""
