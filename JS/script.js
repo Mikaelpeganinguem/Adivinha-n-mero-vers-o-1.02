@@ -16,7 +16,7 @@ function confirm() {
        resposta.innerText = "Seu número é MENOR que o meu"
        atualizarTentativas(chances);
     }else if(chute === numero && tentativas != 0){
-       resposta.innerText = `PARABÉNS! Você acertou o número é ${numero}`
+       resposta.innerText = `VOCÊ ACERTOU! O número é ${numero}`
        let denovo = document.getElementById('denovo');
        
        denovo.style.display = 'block'
